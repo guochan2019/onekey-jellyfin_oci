@@ -29,7 +29,7 @@ command -v skopeo &>/dev/null || err "未找到 skopeo（PVE 9.1+ OCI 支持依�
 CTID=200
 CT_NAME="Jellyfin-Films"
 CT_IP="192.168.50.11/24"
-CT_GW="192.168.50.1"
+CT_GW="192.168.50.2"
 TPL_REF="docker://jellyfin/jellyfin:preview"
 TPL_NAME="jellyfin_preview.tar"
 VZTPL_DIR="/var/lib/vz/template/cache"
@@ -70,7 +70,7 @@ echo ""
 [ -n "${CT_PASS}" ] || err "密码不能为空"
 info "  ✓ root 密码已设置（不回显）"
 
-# 容器 IP / 网关（默认 192.168.50.11/24、192.168.50.1）
+# 容器 IP / 网关（默认 192.168.50.11/24、192.168.50.2）
 read -p "请输入容器 IP (默认 ${CT_IP}): " CT_IP_INPUT </dev/tty
 CT_IP=${CT_IP_INPUT:-${CT_IP}}
 read -p "请输入网关 IP (默认 ${CT_GW}): " CT_GW_INPUT </dev/tty
