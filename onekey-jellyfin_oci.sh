@@ -27,7 +27,7 @@ command -v skopeo &>/dev/null || err "未找到 skopeo（PVE 9.1+ OCI 支持依�
 
 # ---------- 配置 ----------
 CTID=200
-CT_NAME="Jellyfin-Films"
+CT_NAME="OCI-Jellyfin-50.11"
 CT_IP="192.168.50.11/24"
 CT_GW="192.168.50.2"
 TPL_REF="docker://jellyfin/jellyfin:preview"
